@@ -23,8 +23,8 @@ jobs:
           FROM_BRANCH: "master"
           TO_BRANCH: "feature/lightspeed-transition"
       - name: second step
-          uses: tretuna/sync-branches@1.4.0
-          with:
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-            FROM_BRANCH: "feature/lightspeed-transition"
-            TO_BRANCH: "master"
+        uses: tretuna/sync-branches@1.4.0
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          FROM_BRANCH: "feature/lightspeed-transition"
+          TO_BRANCH: "master"
