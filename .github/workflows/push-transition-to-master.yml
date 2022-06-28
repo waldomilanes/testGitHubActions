@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
       - name: Set up Node
         uses: actions/setup-node@v1
         with:
@@ -22,9 +24,11 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           FROM_BRANCH: "master"
           TO_BRANCH: "feature/lightspeed-transition"
+          PULL_REQUEST_TITLE: "updating transition"
       - name: second step
         uses: tretuna/sync-branches@1.4.0
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           FROM_BRANCH: "feature/lightspeed-transition"
           TO_BRANCH: "master"
+          PULL_REQUEST_TITLE: "[CAT-10308] merge lightspeed -> master"
