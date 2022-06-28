@@ -25,6 +25,7 @@ jobs:
           FROM_BRANCH: "master"
           TO_BRANCH: "feature/lightspeed-transition"
           PULL_REQUEST_TITLE: "updating transition"
+          CONTENT_COMPARISON: true
       - name: second step
         uses: tretuna/sync-branches@1.4.0
         with:
@@ -32,3 +33,4 @@ jobs:
           FROM_BRANCH: "feature/lightspeed-transition"
           TO_BRANCH: "master"
           PULL_REQUEST_TITLE: "[CAT-10308] merge lightspeed -> master"
+          CONTENT_COMPARISON: true
