@@ -24,7 +24,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           FROM_BRANCH: "master"
           TO_BRANCH: "feature/lightspeed-transition"
-          PULL_REQUEST_TITLE: "updating transition"
+          PULL_REQUEST_TITLE: "Sync up lightspeed-transition with master"
           CONTENT_COMPARISON: true
       - name: second step
         uses: tretuna/sync-branches@1.4.0
