@@ -26,8 +26,6 @@ jobs:
           TO_BRANCH: "feature/lightspeed-transition"
           PULL_REQUEST_TITLE: "Sync up lightspeed-transition with master"
           CONTENT_COMPARISON: true
-          REVIEWERS:
-          - waldomilanes
       - name: second step
         uses: tretuna/sync-branches@1.4.0
         with:
