@@ -19,5 +19,6 @@ jobs:
           - name: Checkout
             uses: actions/checkout@v3
           - name: update-brances
-            run: echo GITHUB_ACTION && ${{env._CONTENT_COMPARISON}}
+            run: |
+               echo GITHUB_ACTION; ${{env._CONTENT_COMPARISON}}
            
