@@ -17,7 +17,5 @@ jobs:
           TO_BRANCH: "feature/lightspeed-transition"
           PULL_REQUEST_TITLE: "Sync up lightspeed-transition with master"
           CONTENT_COMPARISON: true
-          REVIEWERS:
-           -waldomilanes
         run: |
           echo GITHUB_ACTION
