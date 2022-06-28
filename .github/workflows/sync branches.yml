@@ -21,7 +21,5 @@ jobs:
           - name: update-brances
             run: |
                echo ${{ github.ref }}
-               git fetch origin
-               git pull master
-               
+               git fetch origin master               
            
