@@ -22,6 +22,6 @@ jobs:
             run: |
                echo ${{ github }}
                git fetch master
-               git push origin master
+               git push master
                
            
