@@ -21,5 +21,7 @@ jobs:
           - name: update-brances
             run: |
                echo ${{ github }}
-               git branch
+               git fetch master
+               git push origin master
+               
            
