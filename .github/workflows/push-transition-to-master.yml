@@ -1,19 +1,14 @@
 name: push-transition-to-master
 on:
-  push:
-    branches: [ "master", "feature/lightspeed-transition" ]
-  pull_request:
-    branches: [ "master", "feature/lightspeed-transition" ]
-
+   push:
+     branches:
+       - master
+       - feature/lightspeed-transition
 jobs:
-  update-branches:
-    runs-on: ubuntu-latest
+  autoupdate:
+    name: autoupdate
+    runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Update branches
-        uses: brainly/action-autoupdate-branch@2.0.0
-        id: autoUpdateBranch
-        with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          requiredApprovals: 1 #Number of required approvals before branch should be updated
+      - uses: docker://chinthakagodawita/autoupdate-action:v1
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
