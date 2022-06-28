@@ -21,4 +21,5 @@ jobs:
           - name: update-brances
             run: |
                echo ${{ github }}
+               git logs
            
