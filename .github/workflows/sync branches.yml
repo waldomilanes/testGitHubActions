@@ -20,8 +20,6 @@ jobs:
             uses: actions/checkout@v3
           - name: update-brances
             run: |
-               echo ${{ github }}
-               git fetch master
-               git push master
+               echo ${{ github.ref }}
                
            
